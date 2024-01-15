@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_cuesheet_taping,cuesheet.taping,model_cuesheet_taping,,1,1,1,1
+access_cuesheet_tapingversion,cuesheet.tapingversion,model_cuesheet_tapingversion,,1,1,1,1

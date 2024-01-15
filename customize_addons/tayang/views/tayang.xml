@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="tayang_view_tree" model="ir.ui.view">
+        <field name="name">tayang.view.tree</field>
+        <field name="model">tayang.taping</field>
+        <field name="arch" type="xml">
+            <tree string="Jadwal Taping Tayangan">
+                <field name="name"></field>
+                <field name="dt_taping"></field>
+                <field name="version_id"></field>
+                <field name="tema"></field>
+            </tree>
+        </field>
+    </record>
+    <record id="tayang_view_form" model="ir.ui.view">
+        <field name="name">tayang.view.form</field>
+        <field name="model">tayang.taping</field>
+        <field name="arch" type="xml">
+            <form string="Jadwal Taping Tayangan">
+                <sheet>
+                    <group>
+                        <field name="name"></field>
+                        <field name="dt_taping"></field>
+                        <field name="version_id"></field>
+                        <field name="tema"></field>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <!-- model.name action window -->
+    <record id="tayang_action" model="ir.actions.act_window">
+        <field name="name">Jadwal Taping</field>
+        <field name="res_model">tayang.taping</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                <!-- Create -->
+            </p><p>
+                <!-- More Detail -->
+            
+            </p>
+        </field>
+    </record>
+    <menuitem
+        id="tayang_menu"
+        name="Tayang"
+        sequence="10"/>
+    <menuitem
+        id="jadwal_taping_menu"
+        parent="tayang_menu"
+        name="Jadwal Taping"
+        action="tayang.tayang_action" 
+        sequence="10"/>    
+    <!-- <menuitem
+        id="version_menu"
+        name="version"
+        parent="tayang_menu"
+        sequence="10"/>      -->
+    
+</odoo>
